@@ -19,6 +19,6 @@ clientPromise = global._mongoClientPromise;
 
 export async function connectToDatabase() {
   const client = await clientPromise;
-  const db = client.db(process.env.MONGODB_DB); // Si tienes múltiples bases, puedes hacer client.db("mydb")
+  const db = client.db(process.env.MONGODB_DB);
   return { client, db };
 }
